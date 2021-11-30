@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="itemFormContext" prefHeight="699.0" prefWidth="1029.0" style="-fx-background-color: linear-gradient(to right bottom, #3008d1, #4c079a, #49126a, #391b42, #201e20);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ItemFormController">
+   <children>
+      <Label layoutX="15.0" layoutY="43.0" text="Item Form" textFill="#ffba80">
+         <font>
+            <Font name="Bell MT Bold" size="32.0" />
+         </font>
+      </Label>
+      <Separator layoutX="176.0" layoutY="71.0" prefHeight="3.0" prefWidth="822.0" />
+      <Label layoutX="36.0" layoutY="114.0" text="Item Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="52.0" layoutY="162.0" text="Quantity" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="455.0" layoutY="111.0" text="Price (Rs)" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="458.0" layoutY="161.0" text="discount" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtItemName" layoutX="138.0" layoutY="109.0" />
+      <TextField fx:id="txtQuality" layoutX="138.0" layoutY="158.0" />
+      <TextField fx:id="txtPrice" layoutX="546.0" layoutY="106.0" />
+      <TextField fx:id="txtDiscount" layoutX="546.0" layoutY="156.0" />
+      <Button layoutX="803.0" layoutY="222.0" mnemonicParsing="false" onAction="#addItemOnAction" prefHeight="31.0" prefWidth="152.0" style="-fx-background-color: #00008B; -fx-border-radius: 10; -fx-background-radius: 10;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="813.0" layoutY="110.0" text="Item Code :" textFill="WHITE" />
+      <Label fx:id="lblItemCode" layoutX="907.0" layoutY="110.0" prefHeight="21.0" prefWidth="91.0" textFill="WHITE" />
+      <TableView fx:id="tblItemDetails" layoutX="38.0" layoutY="286.0" prefHeight="390.0" prefWidth="521.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="85.0" style="-fx-border-color: black;" text="Item Code" />
+          <TableColumn fx:id="colName" prefWidth="162.0" style="-fx-border-color: black;" text="Item Name" />
+            <TableColumn fx:id="colQuantity" prefWidth="72.0" style="-fx-border-color: black;" text="Quantity" />
+            <TableColumn fx:id="colPrice" prefWidth="104.0" style="-fx-border-color: black;" text="Price (Rs)" />
+            <TableColumn fx:id="colDiscount" prefWidth="95.0" style="-fx-border-color: black;" text="Discount" />
+        </columns>
+      </TableView>
+      <Label layoutX="630.0" layoutY="369.0" text="Item Name" textFill="WHITE" />
+      <Label layoutX="644.0" layoutY="416.0" text="Quantity" textFill="WHITE" />
+      <TextField fx:id="txtName1" layoutX="732.0" layoutY="364.0" />
+      <TextField fx:id="txtQTY1" layoutX="732.0" layoutY="413.0" />
+      <Label layoutX="641.0" layoutY="473.0" text="Price (Rs)" textFill="WHITE" />
+      <Label layoutX="644.0" layoutY="523.0" text="discount" textFill="WHITE" />
+      <TextField fx:id="txtPrice1" layoutX="732.0" layoutY="468.0" />
+      <TextField fx:id="txtDiscount1" layoutX="732.0" layoutY="518.0" />
+      <Button fx:id="btnUpdate" layoutX="612.0" layoutY="598.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="31.0" prefWidth="152.0" style="-fx-background-color: #00008B; -fx-border-radius: 10; -fx-background-radius: 10;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="799.0" layoutY="598.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="31.0" prefWidth="152.0" style="-fx-background-color: #800000; -fx-border-radius: 10; -fx-background-radius: 10;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="632.0" layoutY="320.0" text="Item Code" textFill="WHITE" />
+      <TextField fx:id="txtItemCode1" disable="true" layoutX="732.0" layoutY="315.0" mouseTransparent="true" />
+      <FontAwesomeIconView glyphName="HOME" layoutX="13.0" layoutY="33.0" onMouseClicked="#backToHome" size="30.0" wrappingWidth="34.00001063942909">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontAwesomeIconView>
+   </children>
+</AnchorPane>

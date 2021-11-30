@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="placeOrderContext" prefHeight="699.0" prefWidth="1029.0" style="-fx-background-color: linear-gradient(to right bottom, #3008d1, #4c079a, #49126a, #391b42, #201e20);;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PlaceOrderFormController">
+    <children>
+        <Label layoutX="388.0" layoutY="41.0" text="Place Order Form" textFill="WHITE">
+            <font>
+                <Font name="Bell MT Bold" size="32.0" />
+            </font>
+        </Label>
+        <Separator layoutX="658.0" layoutY="58.0" prefHeight="0.0" prefWidth="340.0" />
+        <Label layoutX="957.0" layoutY="78.0" prefHeight="21.0" prefWidth="61.0" textFill="WHITE" />
+        <Button layoutX="639.0" layoutY="626.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="152.0" style="-fx-background-color: #170DAE; -fx-border-radius: 10; -fx-background-radius: 10;" text="Place Order" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Button layoutX="826.0" layoutY="626.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="152.0" style="-fx-background-color: #7A8079; -fx-border-radius: 10; -fx-background-radius: 10;" text="Cancel" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Label layoutX="37.0" layoutY="110.0" text="Search Customer" textFill="WHITE" />
+        <TextField fx:id="txtContact" disable="true" layoutX="450.0" layoutY="170.0" mouseTransparent="true" prefHeight="31.0" prefWidth="189.0" />
+      <Label layoutX="374.0" layoutY="174.0" text="Contact" textFill="WHITE" />
+      <JFXTextField fx:id="txtSearchCustomer" focusColor="#09e14a" layoutX="165.0" layoutY="100.0" onAction="#searchCustomerOnAction" prefHeight="31.0" prefWidth="440.0" unFocusColor="WHITE" />
+      <TextField fx:id="txtNIC" disable="true" layoutX="763.0" layoutY="170.0" mouseTransparent="true" prefHeight="31.0" prefWidth="175.0" />
+      <Label layoutX="710.0" layoutY="174.0" text="NIC" textFill="WHITE" />
+      <TextField fx:id="txtName" disable="true" layoutX="128.0" layoutY="170.0" mouseTransparent="true" prefHeight="31.0" prefWidth="189.0" />
+      <Label layoutX="53.0" layoutY="174.0" text="Name" textFill="WHITE" />
+      <Separator layoutX="37.0" layoutY="60.0" prefHeight="0.0" prefWidth="340.0" />
+      <ComboBox fx:id="cmbItemList" layoutX="43.0" layoutY="259.0" prefHeight="31.0" prefWidth="276.0" promptText="Item" />
+      <TextField layoutX="418.0" layoutY="259.0" prefHeight="31.0" prefWidth="113.0" />
+      <Label layoutX="365.0" layoutY="264.0" text="QTY :" textFill="WHITE" />
+      <TableView layoutX="28.0" layoutY="327.0" prefHeight="249.0" prefWidth="977.0">
+        <columns>
+          <TableColumn prefWidth="155.0" text="Item Code" />
+          <TableColumn prefWidth="276.0" text="Name" />
+            <TableColumn prefWidth="179.0" text="Price" />
+            <TableColumn prefWidth="213.0" text="Discount" />
+            <TableColumn prefWidth="150.0" text="Order QTY" />
+        </columns>
+      </TableView>
+      <Button layoutX="598.0" layoutY="259.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="175.0" style="-fx-background-color: #27E20B;" text="Add to Cart" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <FontAwesomeIconView glyphName="HOME" layoutX="12.0" layoutY="39.0" onMouseClicked="#backToHome" size="30.0" wrappingWidth="34.00001063942909">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontAwesomeIconView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="customerFormContext" prefHeight="699.0" prefWidth="1029.0" style="-fx-background-color: linear-gradient(to right bottom, #3008d1, #4c079a, #49126a, #391b42, #201e20);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerFormController">
+    <children>
+        <Label layoutX="15.0" layoutY="38.0" text="Customer Form" textFill="#ff8282">
+            <font>
+                <Font name="Bell MT Bold" size="32.0" />
+            </font>
+        </Label>
+        <Separator layoutX="247.0" layoutY="66.0" prefHeight="3.0" prefWidth="751.0" />
+        <Label layoutX="11.0" layoutY="114.0" text="Customer Name" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font></Label>
+        <Label layoutX="66.0" layoutY="161.0" text="Address" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font></Label>
+        <Label layoutX="412.0" layoutY="111.0" text="Contact" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font></Label>
+        <Label layoutX="438.0" layoutY="161.0" text="NIC" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font></Label>
+        <TextField fx:id="txtCName" layoutX="138.0" layoutY="109.0" />
+        <TextField fx:id="txtCAddress" layoutX="138.0" layoutY="158.0" />
+        <TextField fx:id="txtCContact" layoutX="494.0" layoutY="106.0" />
+        <TextField fx:id="txtCNIC" layoutX="494.0" layoutY="156.0" />
+        <Button layoutX="803.0" layoutY="222.0" mnemonicParsing="false" onAction="#addCustomerOnAction" prefHeight="31.0" prefWidth="152.0" style="-fx-background-color: #00008B; -fx-border-radius: 10; -fx-background-radius: 10;" text="Add" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Label layoutX="773.0" layoutY="103.0" text="Customer ID :" textFill="WHITE" />
+        <Label fx:id="lblCustomerID" layoutX="875.0" layoutY="103.0" prefHeight="21.0" prefWidth="90.0" textFill="WHITE" />
+        <TableView fx:id="tblCustomerDetails" layoutX="15.0" layoutY="278.0" prefHeight="390.0" prefWidth="659.0">
+            <columns>
+                <TableColumn fx:id="colID" prefWidth="85.0" style="-fx-border-color: black;" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="92.0" style="-fx-border-color: black;" text="Name" />
+                <TableColumn fx:id="colAddress" prefWidth="142.0" style="-fx-border-color: black;" text="Address" />
+                <TableColumn fx:id="colNIC" prefWidth="112.0" style="-fx-border-color: black;" text="NIC" />
+                <TableColumn fx:id="colContact" prefWidth="106.0" style="-fx-border-color: black;" text="Contact" />
+            <TableColumn fx:id="colEmail" prefWidth="117.0" style="-fx-border-color: black;" text="E-mail" />
+            </columns>
+        </TableView>
+        <Label layoutX="721.0" layoutY="368.0" text=" Name" textFill="WHITE" />
+        <Label layoutX="739.0" layoutY="418.0" text="NIC" textFill="WHITE" />
+        <TextField fx:id="txtCName1" layoutX="798.0" layoutY="364.0" />
+        <TextField fx:id="txtCNIC1" layoutX="798.0" layoutY="413.0" />
+        <Label layoutX="712.0" layoutY="471.0" text="Address" textFill="WHITE" />
+        <Label layoutX="713.0" layoutY="521.0" text="Contact" textFill="WHITE" />
+        <TextField fx:id="txtCAddress1" layoutX="798.0" layoutY="465.0" />
+        <TextField fx:id="txtCContact1" layoutX="798.0" layoutY="515.0" />
+        <Button fx:id="btnUpdate" layoutX="715.0" layoutY="637.0" mnemonicParsing="false" onAction="#updateCustomerOnAction" prefHeight="31.0" prefWidth="124.0" style="-fx-background-color: #00008B; -fx-border-radius: 10; -fx-background-radius: 10;" text="Update" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Button fx:id="btnDelete" layoutX="868.0" layoutY="637.0" mnemonicParsing="false" onAction="#deleteCustomerOnAction" prefHeight="31.0" prefWidth="124.0" style="-fx-background-color: #800000; -fx-border-radius: 10; -fx-background-radius: 10;" text="Delete" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Label layoutX="687.0" layoutY="320.0" text="Customer ID" textFill="WHITE" />
+        <TextField fx:id="txtcID1" disable="true" layoutX="798.0" layoutY="315.0" mouseTransparent="true" />
+      <Label layoutX="731.0" layoutY="162.0" text="E-mail" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCEmail" layoutX="792.0" layoutY="157.0" />
+      <Label layoutX="722.0" layoutY="571.0" text="E-mail" textFill="WHITE" />
+      <TextField fx:id="txtCEmail1" layoutX="798.0" layoutY="566.0" />
+      <FontAwesomeIconView glyphName="HOME" layoutX="15.0" layoutY="34.0" onMouseClicked="#backToHome" size="30.0" wrappingWidth="34.00001063942909">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontAwesomeIconView>
+    </children>
+</AnchorPane>
